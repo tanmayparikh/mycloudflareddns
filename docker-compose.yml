@@ -1,0 +1,9 @@
+services:
+
+  cloudflareddns:
+    image: tanmayparikh/mycloudflareddns
+    container_name: cloudflareddns
+    restart: unless-stopped
+    env_file: 
+      - .env
+    build: .
