@@ -27,7 +27,7 @@ def main():
 
     hosts = hosts_str.split(";")
     for host in hosts:
-        print(f"Updating host {host} -> {public_ip}...", end="", flush=True)
+        print(f"Updating host {host} -> {public_ip}...", end="")
         res = update(host, public_ip)
         print(res)
 
@@ -40,4 +40,5 @@ if __name__ == "__main__":
     while True:
         main()
         print(f"Sleeping for {refresh_sleep}s")
+        print("", flush=True)
         time.sleep(refresh_sleep)
